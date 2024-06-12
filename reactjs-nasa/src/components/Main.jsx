@@ -1,9 +1,10 @@
 import React from "react";
 
-const Main = () => {
+const Main = (props) => {
+  const { data } = props;
   return (
     <div className="imgContainer">
-      <img src="mars.png" alt="mars-image" className="bgImage" />
+      <img src={data?.hdurl} alt={data?.title || "bg-img"} className="bgImage" />
     </div>
   );
 };
